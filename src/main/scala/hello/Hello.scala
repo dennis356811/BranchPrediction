@@ -31,5 +31,5 @@ class Hello extends Module {
  * An object extending App to generate the Verilog code.
  */
 object Hello extends App {
-  (new chisel3.stage.ChiselStage).emitVerilog(new Hello(), Array("--target-dir", "generated"))
+  (new chisel3.stage.ChiselStage).emitVerilog(new Hello(), Array("--target-dir", "generated/hello"))
 }
