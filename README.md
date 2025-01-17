@@ -17,4 +17,4 @@ usage:
 ```
 ./push_to_github.sh "your commit message"
 ```
-automatically push to github
+automatically push to github.
