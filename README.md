@@ -11,3 +11,10 @@ test裡面放testbench
 
 ### test_run_dir
 存放 .vcd
+
+### push_to_github.sh
+usage:
+```
+./push_to_github.sh "your commit message"
+```
+automatically push to github
