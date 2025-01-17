@@ -1,3 +1,7 @@
 */
-!src/
-!src/**
+!5-Stage-RV32I/
+!5-Stage-RV32I/src/
+!5-Stage-RV32I/src/**
+!TestExample/
+!TestExample/src/
+!TestExample/src/**
