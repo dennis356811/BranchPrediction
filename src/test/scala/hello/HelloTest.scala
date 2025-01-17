@@ -10,7 +10,7 @@ class HelloTest extends AnyFlatSpec with ChiselScalatestTester {
       var ledStatus = BigInt(-1)
       println("Start the blinking LED")
       for (_ <- 0 until 100) {
-        c.clock.step(10000)
+        c.clock.step(100)
         val ledNow = c.io.led.peek().litValue
         val s = if (ledNow == 0) "o" else "*"
         if (ledStatus != ledNow) {
