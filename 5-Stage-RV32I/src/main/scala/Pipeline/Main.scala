@@ -15,9 +15,8 @@ class PIPELINE extends Module {
     // PC / PC+4
     val PC                  =   Module(new PC)
     val PC4                 =   Module(new PC4)
-
     // Memory   
-    val InstMemory          =   Module(new InstMem ("/mnt/c/Linux/5-Stage-RV32I/src/main/scala/Pipeline/test.txt"))
+    val InstMemory          =   Module(new InstMem ("/mnt/c/Linux/ChiselTest/5-Stage-RV32I/src/main/scala/Pipeline/prog0_fix.hex"))
     val DataMemory          =   Module(new DataMemory)
 
     // Helping Units
@@ -318,6 +317,10 @@ class PIPELINE extends Module {
   
     io.out := 0.S
 
+}
+
+object PIPE extends App {
+  (new chisel3.stage.ChiselStage).emitVerilog(new PIPELINE(), Array("--target-dir", "generated/pipeline"))
 }
 
 

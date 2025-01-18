@@ -2,15 +2,15 @@
     "version": "1.4.0",
     "project": {
         "name": "root-5-stage-rv32i-build-build",
-        "directory": "/mnt/c/Linux/5-Stage-RV32I/project/project",
-        "workspaceDir": "/mnt/c/Linux/5-Stage-RV32I/project/project",
+        "directory": "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project",
+        "workspaceDir": "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project",
         "sources": [
-            "/mnt/c/Linux/5-Stage-RV32I/project/project/src/main/scala",
-            "/mnt/c/Linux/5-Stage-RV32I/project/project/src/main/scala-2.12",
-            "/mnt/c/Linux/5-Stage-RV32I/project/project/src/main/scala-2",
-            "/mnt/c/Linux/5-Stage-RV32I/project/project/src/main/java",
-            "/mnt/c/Linux/5-Stage-RV32I/project/project/src/main/scala-sbt-1.0",
-            "/mnt/c/Linux/5-Stage-RV32I/project/project/target/scala-2.12/sbt-1.0/src_managed/main"
+            "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/src/main/scala",
+            "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/src/main/scala-2.12",
+            "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/src/main/scala-2",
+            "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/src/main/java",
+            "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/src/main/scala-sbt-1.0",
+            "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/target/scala-2.12/sbt-1.0/src_managed/main"
         ],
         "dependencies": [
             
@@ -106,11 +106,11 @@
             "/home/dennis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okio/okio/1.17.2/okio-1.17.2.jar",
             "/home/dennis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3.jar"
         ],
-        "out": "/mnt/c/Linux/5-Stage-RV32I/project/project/.bloop/root-5-stage-rv32i-build-build",
-        "classesDir": "/mnt/c/Linux/5-Stage-RV32I/project/project/.bloop/root-5-stage-rv32i-build-build/scala-2.12/sbt-1.0/classes",
+        "out": "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/.bloop/root-5-stage-rv32i-build-build",
+        "classesDir": "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/.bloop/root-5-stage-rv32i-build-build/scala-2.12/sbt-1.0/classes",
         "resources": [
-            "/mnt/c/Linux/5-Stage-RV32I/project/project/src/main/resources",
-            "/mnt/c/Linux/5-Stage-RV32I/project/project/target/scala-2.12/sbt-1.0/resource_managed/main"
+            "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/src/main/resources",
+            "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/target/scala-2.12/sbt-1.0/resource_managed/main"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -194,7 +194,7 @@
             "config": {
                 "home": "/home/dennis/.sdkman/candidates/java/11.0.21-tem",
                 "options": [
-                    "-Duser.dir=/mnt/c/Linux/5-Stage-RV32I/project/project"
+                    "-Duser.dir=/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project"
                 ]
             },
             "mainClass": [
@@ -203,11 +203,11 @@
             "runtimeConfig": {
                 "home": "/home/dennis/.sdkman/candidates/java/11.0.21-tem",
                 "options": [
-                    "-Duser.dir=/mnt/c/Linux/5-Stage-RV32I/project/project"
+                    "-Duser.dir=/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project"
                 ]
             },
             "classpath": [
-                "/mnt/c/Linux/5-Stage-RV32I/project/project/.bloop/root-5-stage-rv32i-build-build/scala-2.12/sbt-1.0/classes",
+                "/mnt/c/Linux/ChiselTest/5-Stage-RV32I/project/project/.bloop/root-5-stage-rv32i-build-build/scala-2.12/sbt-1.0/classes",
                 "/home/dennis/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.6.0/sbt-bloop-1.6.0.jar",
                 "/home/dennis/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/2.0.2/bloop-config_2.12-2.0.2.jar",
                 "/home/dennis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.4.0/jsoniter-scala-core_2.12-2.4.0.jar",

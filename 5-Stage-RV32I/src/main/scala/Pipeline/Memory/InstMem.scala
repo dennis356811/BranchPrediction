@@ -3,6 +3,7 @@ import chisel3._
 import chisel3.util._
 import chisel3.util.experimental.loadMemoryFromFile
 import scala.io.Source
+import firrtl.annotations.MemoryLoadFileType
 
 class InstMem(initFile: String) extends Module {
   val io = IO(new Bundle {
@@ -10,6 +11,6 @@ class InstMem(initFile: String) extends Module {
     val data        =   Output(UInt(32.W))      // Output instruction
   })
   val imem = Mem(1024, UInt(32.W))
-  loadMemoryFromFile(imem, initFile)
+  loadMemoryFromFile(imem, initFile, MemoryLoadFileType.Hex)
   io.data := imem(io.addr/4.U)
 }

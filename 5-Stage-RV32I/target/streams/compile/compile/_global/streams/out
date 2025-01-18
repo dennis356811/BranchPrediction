@@ -1,4 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-Stage-RV32I/src/main/scala/Pipeline/Main.scala:144:21: value ID_EX_emRead is not a member of chisel3.Bundle{val IF_ID_inst: chisel3.UInt; val ID_EX_memRead: chisel3.Bool; val ID_EX_rd: chisel3.UInt; val pc_in: chisel3.SInt; val current_pc: chisel3.SInt; val inst_forward: chisel3.Bool; val pc_forward: chisel3.Bool; val ctrl_forward: chisel3.Bool; val inst_out: chisel3.UInt; val pc_out: chisel3.SInt; val current_pc_out: chisel3.SInt}[0m
-[0m[[0m[31merror[0m] [0m[0m    HazardDetect.io.ID_EX_emRead := ID_EX_.io.ctrl_MemRd_out[0m
-[0m[[0m[31merror[0m] [0m[0m                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0m'-P:chiselplugin:useBundlePlugin' is now default behavior, you can stop using the scalacOption.[0m
+[0m[[0m[33mwarn[0m] [0m[0m/mnt/c/Linux/ChiselTest/5-Stage-RV32I/src/main/scala/gcd/DecoupledGCD.scala:26:40: type MultiIOModule in package chisel3 is deprecated (since Chisel 3.5): MultiIOModule is now just Module[0m
+[0m[[0m[33mwarn[0m] [0m[0mclass DecoupledGcd(width: Int) extends MultiIOModule {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

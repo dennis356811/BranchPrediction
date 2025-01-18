@@ -3,8 +3,7 @@ import chiseltest._
 import org.scalatest.flatspec.AnyFlatSpec
 
 class FIRTest extends AnyFlatSpec with ChiselScalatestTester {
-    behavior of "Hello"
-  it should "pass" in {
+    "FIRTest" should "pass" in {
     test(new FIR(1,1,1,1))
       .withAnnotations(Seq(WriteVcdAnnotation)) { c =>
         c.io.data.poke(3.U)
