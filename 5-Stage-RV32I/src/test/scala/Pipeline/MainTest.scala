@@ -9,7 +9,9 @@ class TOPTest extends AnyFlatSpec with ChiselScalatestTester{
     test(new PIPELINE())
         .withAnnotations(Seq(WriteVcdAnnotation)){
             x =>
-            x.clock.step(999) 
+            x.clock.setTimeout(0)
+            x.clock.step(10000) 
+            
         }
     }    
 }
