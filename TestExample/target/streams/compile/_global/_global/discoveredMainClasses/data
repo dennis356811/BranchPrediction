@@ -1,1 +1,1 @@
-["FIR","Hello"]
+["ALU","Decoder","FIR","Hello","RegFile","Reg_D","Reg_E","Reg_M","Reg_PC","Reg_W","SRAM"]
