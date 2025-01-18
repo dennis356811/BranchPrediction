@@ -1,11 +1,11 @@
 #Successful Tests
-#Sat Jan 18 23:14:01 CST 2025
+#Sat Jan 18 23:33:26 CST 2025
 single_cycle.instr_memtest=1720867595334
-Pipeline.TOPTest=1737213241180
+Pipeline.TOPTest=1737214406425
 single_cycle.pctest=1720869137521
 pipeline.Datapathtest=1725557005388
-single_cycle.Datamemtest=1720866283968
 single_cycle.regfiletest=1720868256513
+single_cycle.Datamemtest=1720866283968
 single_cycle.branchtest=1720866039152
 gcd.GCDSpec=1737178537479
 single_cycle.Alutest=1720865499457
