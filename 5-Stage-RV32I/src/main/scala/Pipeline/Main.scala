@@ -16,7 +16,7 @@ class PIPELINE extends Module {
     val PC                  =   Module(new PC)
     val PC4                 =   Module(new PC4)
     // Memory   
-    val InstMemory          =   Module(new InstMem ("/mnt/c/Linux/ChiselTest/5-Stage-RV32I/src/main/scala/Pipeline/prog0_fix.hex"))
+    val InstMemory          =   Module(new InstMem ("./src/main/scala/Pipeline/prog0_fix.hex"))
     val DataMemory          =   Module(new DataMemory)
 
     // Helping Units
