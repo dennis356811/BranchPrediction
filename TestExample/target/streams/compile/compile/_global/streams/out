@@ -1,7 +1,16 @@
-[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Controller_backup copy.scala:3:8: ControllerOpcodeDefition is already defined as object ControllerOpcodeDefition[0m
-[0m[[0m[31merror[0m] [0m[0mobject ControllerOpcodeDefition{[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Top.scala:101:8: value w_en is not a member of SRAM[0m
+[0m[[0m[31merror[0m] [0m[0m    im.w_en                     := F_im_w_en[0m
 [0m[[0m[31merror[0m] [0m[0m       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Controller_backup copy.scala:15:7: Controller is already defined as class Controller[0m
-[0m[[0m[31merror[0m] [0m[0mclass Controller extends Module {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Top.scala:102:8: value address is not a member of SRAM[0m
+[0m[[0m[31merror[0m] [0m[0m    im.address                  := out_pc_reg(15, 0)[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Top.scala:103:8: value write_data is not a member of SRAM[0m
+[0m[[0m[31merror[0m] [0m[0m    im.write_data               := 0.U(32.W)[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Top.scala:104:39: value read_data is not a member of SRAM[0m
+[0m[[0m[31merror[0m] [0m[0m    inst_to_Reg_D               := im.read_data[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Top.scala:121:47: value rd_index is not a member of chisel3.Bundle{val inst: chisel3.UInt; val dc_out_opcode: chisel3.UInt; val dc_out_func3: chisel3.UInt; val dc_out_func7: chisel3.UInt; val dc_out_rs1_index: chisel3.UInt; val dc_out_rs2_index: chisel3.UInt; val dc_out_rd_index: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m    rd_index                    := decoder.io.rd_index[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

@@ -36,6 +36,12 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Reg_E$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FIR$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/FIR$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Top.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Top.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Top$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Top$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Top$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Top$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Reg_PC$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Reg_PC$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ALU.class[0m
@@ -50,16 +56,10 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Controller$$anon$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Decoder.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Decoder.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ControllerOpcodeDefition$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/ControllerOpcodeDefition$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Reg_M$$anon$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Reg_M$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Imm_ExtOpcodeDefition$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Imm_ExtOpcodeDefition$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Reg_PC$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Reg_PC$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ControllerOpcodeDefition.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/ControllerOpcodeDefition.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Controller.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Controller.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SRAM$$anon$1.class[0m
@@ -78,8 +78,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/OpcodeFunc7Funct3Defition$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	LD_Filter$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/LD_Filter$delayedInit$body.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Imm_ExtOpcodeDefition.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Imm_ExtOpcodeDefition.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Decoder$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Decoder$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Reg_D.class[0m
@@ -90,6 +88,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Decoder$$anon$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RegFile.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/RegFile.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Top$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/Top$$anon$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ALU$$anon$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/target/scala-2.12/classes/ALU$$anon$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	OpcodeFunc7Funct3Defition.class[0m

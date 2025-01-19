@@ -3,17 +3,6 @@
 */
 import chisel3._
 import chisel3.util._
-object ControllerOpcodeDefition{
-    val I1      = "b00000".U(5.W)
-    val I2      = "b00100".U(5.W)
-    val R       = "b01100".U(5.W)
-    val Jalr    = "b11001".U(5.W)
-    val B       = "b11000".U(5.W)
-    val S       = "b01000".U(5.W)
-    val lui     = "b01101".U(5.W)
-    val auipc   = "b00101".U(5.W)
-    val Jal     = "b11011".U(5.W)
-}
 
 class Controller extends Module {
     val io = IO(new Bundle {
@@ -71,7 +60,7 @@ class Controller extends Module {
 
     when(io.stall || io.next_pc_sel){
         // refeash E stage
-        IN_E_OP_REG     := ControllerOpcodeDefition.R
+        IN_E_OP_REG     := OpcodeFunc7Funct3Defition.R
         IN_E_F3_REG     := 0.U(3.W)
         IN_E_RD_REG     := 0.U(5.W)
         IN_E_RS1_REG    := 0.U(5.W)
@@ -129,9 +118,9 @@ class Controller extends Module {
 
     // D_rs1 used
     when(
-        io.op === ControllerOpcodeDefition.lui || 
-        io.op === ControllerOpcodeDefition.auipc || 
-        io.op === ControllerOpcodeDefition.Jal
+        io.op === OpcodeFunc7Funct3Defition.lui || 
+        io.op === OpcodeFunc7Funct3Defition.auipc || 
+        io.op === OpcodeFunc7Funct3Defition.Jal
     ){
         is_D_use_rs1 := false.B
     }.otherwise{
@@ -140,9 +129,9 @@ class Controller extends Module {
 
     // D_rs2 used
     when(
-        io.op === ControllerOpcodeDefition.R || 
-        io.op === ControllerOpcodeDefition.S || 
-        io.op === ControllerOpcodeDefition.B
+        io.op === OpcodeFunc7Funct3Defition.R || 
+        io.op === OpcodeFunc7Funct3Defition.S || 
+        io.op === OpcodeFunc7Funct3Defition.B
     ){
         is_D_use_rs2 := true.B
     }.otherwise{
@@ -151,9 +140,9 @@ class Controller extends Module {
 
     // E_rs1 used
     when(
-        IN_E_OP_REG === ControllerOpcodeDefition.lui || 
-        IN_E_OP_REG === ControllerOpcodeDefition.auipc || 
-        IN_E_OP_REG === ControllerOpcodeDefition.Jal
+        IN_E_OP_REG === OpcodeFunc7Funct3Defition.lui || 
+        IN_E_OP_REG === OpcodeFunc7Funct3Defition.auipc || 
+        IN_E_OP_REG === OpcodeFunc7Funct3Defition.Jal
     ){
         is_E_use_rs1 := false.B
     }.otherwise{
@@ -162,9 +151,9 @@ class Controller extends Module {
 
     // E_rs2 used
     when(
-        IN_E_OP_REG === ControllerOpcodeDefition.R || 
-        IN_E_OP_REG === ControllerOpcodeDefition.S || 
-        IN_E_OP_REG === ControllerOpcodeDefition.B
+        IN_E_OP_REG === OpcodeFunc7Funct3Defition.R || 
+        IN_E_OP_REG === OpcodeFunc7Funct3Defition.S || 
+        IN_E_OP_REG === OpcodeFunc7Funct3Defition.B
     ){
         is_E_use_rs2 := true.B
     }.otherwise{
@@ -173,8 +162,8 @@ class Controller extends Module {
 
     //decide M_use_rd
     when (
-        IN_M_OP_REG === ControllerOpcodeDefition.B || 
-        IN_M_OP_REG === ControllerOpcodeDefition.S
+        IN_M_OP_REG === OpcodeFunc7Funct3Defition.B || 
+        IN_M_OP_REG === OpcodeFunc7Funct3Defition.S
     ) {
         is_M_use_rd := false.B;
     }.otherwise{
@@ -183,8 +172,8 @@ class Controller extends Module {
 
     //decide W_rd
     when (
-        IN_W_OP_REG === ControllerOpcodeDefition.B || 
-        IN_W_OP_REG === ControllerOpcodeDefition.S
+        IN_W_OP_REG === OpcodeFunc7Funct3Defition.B || 
+        IN_W_OP_REG === OpcodeFunc7Funct3Defition.S
     ) {
         is_W_use_rd := false.B;
     }.otherwise{
@@ -209,7 +198,7 @@ class Controller extends Module {
     is_D_rs1_E_rd_overlap := is_D_use_rs1 && (io.rs1 === IN_E_RD_REG) && (IN_E_RD_REG =/= false.B);
     is_D_rs2_E_rd_overlap := is_D_use_rs2 && (io.rs2 === IN_E_RD_REG) && (IN_E_RD_REG =/= false.B);
     is_DE_overlap := (is_D_rs1_E_rd_overlap || is_D_rs2_E_rd_overlap);
-    io.stall := (IN_E_OP_REG === ControllerOpcodeDefition.I1) && is_DE_overlap;
+    io.stall := (IN_E_OP_REG === OpcodeFunc7Funct3Defition.I1) && is_DE_overlap;
     //================================Forwarding signal select================================
     
 
@@ -226,55 +215,55 @@ class Controller extends Module {
     io.E_alu_op2_sel    := false.B;
     //switch with in_E_op_reg
     switch(IN_E_OP_REG){
-        is(ControllerOpcodeDefition.Jal){
+        is(OpcodeFunc7Funct3Defition.Jal){
             io.next_pc_sel      := true.B;
             io.E_jb_op1_sel     := false.B;
             io.E_alu_op1_sel    := false.B;
             io.E_alu_op2_sel    := false.B;
         }
-        is(ControllerOpcodeDefition.Jalr){
+        is(OpcodeFunc7Funct3Defition.Jalr){
             io.next_pc_sel      := true.B;
             io.E_jb_op1_sel     := true.B;
             io.E_alu_op1_sel    := false.B;
             io.E_alu_op2_sel    := false.B;
         }
-        is(ControllerOpcodeDefition.B){
+        is(OpcodeFunc7Funct3Defition.B){
             io.next_pc_sel      := io.alu_out;
             io.E_jb_op1_sel     := false.B;
             io.E_alu_op1_sel    := true.B;
             io.E_alu_op2_sel    := true.B;
         }
-        is(ControllerOpcodeDefition.R){
+        is(OpcodeFunc7Funct3Defition.R){
             io.next_pc_sel      := false.B;
             io.E_jb_op1_sel     := false.B;
             io.E_alu_op1_sel    := true.B;
             io.E_alu_op2_sel    := true.B;
         }
-        is(ControllerOpcodeDefition.I2){
+        is(OpcodeFunc7Funct3Defition.I2){
             io.next_pc_sel      := false.B;
             io.E_jb_op1_sel     := false.B;
             io.E_alu_op1_sel    := true.B;
             io.E_alu_op2_sel    := false.B;
         }
-        is(ControllerOpcodeDefition.I1){
+        is(OpcodeFunc7Funct3Defition.I1){
             io.next_pc_sel      := false.B;
             io.E_jb_op1_sel     := false.B;
             io.E_alu_op1_sel    := true.B;
             io.E_alu_op2_sel    := false.B;
         }
-        is(ControllerOpcodeDefition.S){
+        is(OpcodeFunc7Funct3Defition.S){
             io.next_pc_sel      := false.B;
             io.E_jb_op1_sel     := false.B;
             io.E_alu_op1_sel    := true.B;
             io.E_alu_op2_sel    := false.B;
         }
-        is(ControllerOpcodeDefition.auipc){
+        is(OpcodeFunc7Funct3Defition.auipc){
             io.next_pc_sel      := false.B;
             io.E_jb_op1_sel     := false.B;
             io.E_alu_op1_sel    := false.B;
             io.E_alu_op2_sel    := false.B;
         }
-        is(ControllerOpcodeDefition.lui){
+        is(OpcodeFunc7Funct3Defition.lui){
             io.next_pc_sel      := false.B;
             io.E_jb_op1_sel     := false.B;
             io.E_alu_op1_sel    := false.B;
@@ -283,7 +272,7 @@ class Controller extends Module {
     }
 
     //M control signal
-    when(IN_M_OP_REG === ControllerOpcodeDefition.S){
+    when(IN_M_OP_REG === OpcodeFunc7Funct3Defition.S){
         io.M_dm_w_en := 0.U(4.W)
         switch(IN_M_F3_REG){
             is("b000".U){
@@ -305,14 +294,14 @@ class Controller extends Module {
     io.W_f3         := IN_W_F3_REG
 
     when(
-        IN_W_OP_REG === ControllerOpcodeDefition.B ||
-        IN_W_OP_REG === ControllerOpcodeDefition.S
+        IN_W_OP_REG === OpcodeFunc7Funct3Defition.B ||
+        IN_W_OP_REG === OpcodeFunc7Funct3Defition.S
     ){
         io.W_wb_en := false.B
         io.W_wb_data_sel := false.B
     }.otherwise{
         io.W_wb_en := true.B
-        when(IN_W_OP_REG === ControllerOpcodeDefition.I1){
+        when(IN_W_OP_REG === OpcodeFunc7Funct3Defition.I1){
             io.W_wb_data_sel := false.B
         }.otherwise{
             io.W_wb_data_sel := true.B

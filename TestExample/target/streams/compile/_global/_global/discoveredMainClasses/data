@@ -1,1 +1,1 @@
-["ALU","Controller","Decoder","FIR","Hello","Imm_Ext","JB_Unit","LD_Filter","Mux3","RegFile","Reg_D","Reg_E","Reg_M","Reg_PC","Reg_W","SRAM"]
+["ALU","Controller","Decoder","FIR","Hello","Imm_Ext","JB_Unit","LD_Filter","Mux3","RegFile","Reg_D","Reg_E","Reg_M","Reg_PC","Reg_W","SRAM","Top"]
