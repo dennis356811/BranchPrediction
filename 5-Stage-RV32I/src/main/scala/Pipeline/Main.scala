@@ -4,8 +4,13 @@ import chisel3.util._
 
 class PIPELINE extends Module {
     val io = IO(new Bundle {
-        val out = Output (SInt(4.W))
+        val wb_data = Output (SInt(32.W))
+        val mem_wenable = Output (Bool())
+        val mem_read_test = Input(Bool())
+        val mem_addr_test = Input(UInt(32.W))
+        val mem_data_test = Output(SInt(32.W))
     })
+    
     //  Pipes of stages 
     val IF_ID_              =   Module(new IF_ID)
     val ID_EX_              =   Module(new ID_EX)
@@ -314,9 +319,12 @@ class PIPELINE extends Module {
       d := 0.S
     }
     RegFile.io.w_data := d  // Write back data
-  
-    io.out := 0.S
 
+    io.wb_data := DataMemory.io.dataIn
+    io.mem_wenable := DataMemory.io.mem_write
+    DataMemory.io.dataRead_test := io.mem_read_test
+    DataMemory.io.dataAddr_test := io.mem_addr_test
+    io.mem_data_test := DataMemory.io.data_test
 }
 
 object PIPE extends App {

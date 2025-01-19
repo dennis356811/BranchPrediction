@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/TestExample/src/test/scala/Pipeline/MainTest.scala:23:85: value toHexString is not a member of chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m                println(s"addr: ${i.toHexString}, data: ${x.io.mem_data_test.peek().toHexString}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

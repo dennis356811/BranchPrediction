@@ -9,6 +9,9 @@ class DataMemory extends Module {
     val mem_read    = Input(Bool())             // Memory read enable
     val mem_write   = Input(Bool())             // Memory write enable
     val dataOut     = Output(SInt(32.W))        // Data output
+    val dataRead_test = Input(Bool())
+    val dataAddr_test = Input(UInt(32.W))
+    val data_test = Output(SInt(32.W))
   })
   val Dmemory = Mem(1024, SInt(32.W))
   io.dataOut := 0.S
@@ -18,5 +21,10 @@ class DataMemory extends Module {
   }
   when(io.mem_read) {
     io.dataOut := Dmemory.read(io.addr)
+  }
+
+  io.data_test := 0.S
+  when(io.dataRead_test) {
+    io.data_test := Dmemory.read(io.dataAddr_test)
   }
 }

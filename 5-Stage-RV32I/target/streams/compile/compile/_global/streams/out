@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/mnt/d/CA/chisel/ChiselTest/5-Stage-RV32I/src/main/scala/Pipeline/Main.scala:19:52: ')' expected but string literal found.[0m
-[0m[[0m[31merror[0m] [0m[0m    val InstMemory          =   Module(new InstMem "./src/main/scala/Pipeline/Main.scala")[0m
-[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
-[0m[[0m[31merror[0m] [0m[0m/mnt/d/CA/chisel/ChiselTest/5-Stage-RV32I/src/main/scala/Pipeline/Main.scala:41:41: ';' expected but ')' found.[0m
-[0m[[0m[31merror[0m] [0m[0m        (1.U) -> HazardDetect.io.pc_out))[0m
-[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/5-Stage-RV32I/src/main/scala/Pipeline/Memory/DataMemory.scala:26:21: value s is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  io.data_test := 0.s[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
