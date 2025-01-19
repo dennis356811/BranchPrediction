@@ -1,8 +1,11 @@
 package Pipeline
 import chisel3._
 import chisel3.util._
+import chisel3.util.experimental.loadMemoryFromFile
+import scala.io.Source
+import firrtl.annotations.MemoryLoadFileType
 
-class Top extends Module {
+class Top(prog_filename: String) extends Module {
     val io = IO(new Bundle {
         //val pc_out = Output (Bits(32.W))
         val mem_read_test = Input(Bool())
@@ -11,7 +14,7 @@ class Top extends Module {
     })
     // submodules
     val reg_pc          = Module(new Reg_PC)
-    val im              = Module(new SRAM ("./src/main/scala/Pipeline/prog1/prog1.hex"))
+    val im              = Module(new SRAM)
     val reg_d           = Module(new Reg_D)
     val decoder         = Module(new Decoder)
     val imm_ext         = Module(new Imm_Ext)
@@ -20,11 +23,13 @@ class Top extends Module {
     val alu             = Module(new ALU)
     val jb_unit         = Module(new JB_Unit)
     val reg_m           = Module(new Reg_M)
-    val dm              = Module(new SRAM_dm ("./src/main/scala/Pipeline/prog1/prog1.hex"))
+    val dm              = Module(new SRAM_dm)
     val reg_w           = Module(new Reg_W)
     val Ld_filter       = Module(new LD_Filter)
     val controller      = Module(new Controller)
 
+    loadMemoryFromFile(im.mem, prog_filename, MemoryLoadFileType.Hex)
+    loadMemoryFromFile(dm.mem, prog_filename, MemoryLoadFileType.Hex)
 
     // connections
     val to_pc_reg               = Wire(UInt(32.W))
@@ -238,5 +243,6 @@ class Top extends Module {
 }
 
 object Top extends App {
-    (new chisel3.stage.ChiselStage).emitVerilog(new Top, Array("--target-dir", "generated/Top"))
+    val default_prog_filename = "./src/main/scala/Pipeline/prog0/prog0.hex"
+    (new chisel3.stage.ChiselStage).emitVerilog(new Top(default_prog_filename), Array("--target-dir", "generated/Top"))
 }
