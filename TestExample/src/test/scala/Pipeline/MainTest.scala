@@ -8,7 +8,7 @@ import scala.io.Source
 
 class TopTest extends AnyFlatSpec with ChiselScalatestTester{
    "5-Stage test" should "pass" in{
-    val filename = "./src/main/scala/Pipeline/prog0/golden.hex"
+    val filename = "./src/main/scala/Pipeline/prog1/golden.hex"
     val goldenData = Source.fromFile(filename).getLines().map(_.trim).toArray
     val startAddress = 0x9000
     val step = 0x4
@@ -17,7 +17,7 @@ class TopTest extends AnyFlatSpec with ChiselScalatestTester{
         .withAnnotations(Seq(WriteVcdAnnotation)){
             x =>
             x.clock.setTimeout(0)
-            x.clock.step(10000)
+            x.clock.step(30000)
             for ((i, expectedData) <- (startAddress to endAddress by step).zip(goldenData)){
                 x.io.mem_read_test.poke(true.B)
                 x.io.mem_addr_test.poke(i.U)

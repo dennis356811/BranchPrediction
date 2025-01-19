@@ -1,5 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/TestExample/src/main/scala/PipelineCPU/SRAM_dm.scala:51:47: not enough arguments for constructor SRAM: (initFile: String)Pipeline.SRAM.[0m
+[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/TestExample/src/main/scala/Pipeline/SRAM_dm.scala:54:47: not enough arguments for constructor SRAM_dm: (initFile: String)Pipeline.SRAM_dm.[0m
 [0m[[0m[31merror[0m] [0m[0mUnspecified value parameter initFile.[0m
-[0m[[0m[31merror[0m] [0m[0m  (new chisel3.stage.ChiselStage).emitVerilog(new SRAM, Array("--target-dir", "generated/SRAM_dm"))[0m
+[0m[[0m[31merror[0m] [0m[0m  (new chisel3.stage.ChiselStage).emitVerilog(new SRAM_dm, Array("--target-dir", "generated/SRAM_dm"))[0m
 [0m[[0m[31merror[0m] [0m[0m                                              ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

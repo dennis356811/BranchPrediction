@@ -1,1 +1,1 @@
-["FIR","Hello","Pipeline.ALU","Pipeline.Controller","Pipeline.Decoder","Pipeline.Imm_Ext","Pipeline.JB_Unit","Pipeline.LD_Filter","Pipeline.Mux3","Pipeline.RegFile","Pipeline.Reg_D","Pipeline.Reg_E","Pipeline.Reg_M","Pipeline.Reg_PC","Pipeline.Reg_W","Pipeline.SRAM_dm","Pipeline.Top"]
+["FIR","Hello","Pipeline.ALU","Pipeline.Controller","Pipeline.Decoder","Pipeline.Imm_Ext","Pipeline.JB_Unit","Pipeline.LD_Filter","Pipeline.Mux3","Pipeline.RegFile","Pipeline.Reg_D","Pipeline.Reg_E","Pipeline.Reg_M","Pipeline.Reg_PC","Pipeline.Reg_W","Pipeline.Top"]

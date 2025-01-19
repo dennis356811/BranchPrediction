@@ -1,8 +1,11 @@
 package Pipeline
 import chisel3._
 import chisel3.util._
+import chisel3.util.experimental.loadMemoryFromFile
+import scala.io.Source
+import firrtl.annotations.MemoryLoadFileType
 
-class SRAM_dm extends Module {
+class SRAM_dm(initFile: String) extends Module {
   val io = IO(new Bundle {
     val w_en = Input(UInt(4.W))
     val address = Input(UInt(16.W))
@@ -15,7 +18,7 @@ class SRAM_dm extends Module {
   })
 
   val mem = Mem(65536, UInt(8.W))
-
+  loadMemoryFromFile(mem, initFile, MemoryLoadFileType.Hex)
   // write
   when(io.w_en =/= 0.U) {
     when(io.w_en(0)) { mem.write(io.address, io.write_data(7, 0)) }
@@ -46,7 +49,7 @@ class SRAM_dm extends Module {
   }
 }
 
-
+/*
 object SRAM_dm extends App {
   (new chisel3.stage.ChiselStage).emitVerilog(new SRAM_dm, Array("--target-dir", "generated/SRAM_dm"))
-}
+}*/
