@@ -1,6 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/RegFile.scala:19:23: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m required: chisel3.Bool[0m
-[0m[[0m[31merror[0m] [0m[0m  when((io.w_en && io.rd_index) =/= 0.U) {[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Controller_backup copy.scala:3:8: ControllerOpcodeDefition is already defined as object ControllerOpcodeDefition[0m
+[0m[[0m[31merror[0m] [0m[0mobject ControllerOpcodeDefition{[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/PipelineCPU/Controller_backup copy.scala:15:7: Controller is already defined as class Controller[0m
+[0m[[0m[31merror[0m] [0m[0mclass Controller extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

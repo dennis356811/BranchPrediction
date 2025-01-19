@@ -33,6 +33,7 @@ class ALU extends Module {
         val func7 = Input(Bits(1.W))
         val operand1 = Input(Bits(32.W))
         val operand2 = Input(Bits(32.W))
+        
         val alu_out = Output(Bits(32.W))
     })
     val func7_and_func3 = Cat(io.func7, io.func3)
