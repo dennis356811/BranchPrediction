@@ -11,7 +11,7 @@ class Top extends Module {
     })
     // submodules
     val reg_pc          = Module(new Reg_PC)
-    val im              = Module(new SRAM ("./src/main/scala/Pipeline/prog0/prog0_fix.hex"))
+    val im              = Module(new SRAM ("./src/main/scala/Pipeline/prog0/prog0.hex"))
     val reg_d           = Module(new Reg_D)
     val decoder         = Module(new Decoder)
     val imm_ext         = Module(new Imm_Ext)

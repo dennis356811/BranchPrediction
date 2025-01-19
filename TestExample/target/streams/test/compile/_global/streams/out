@@ -1,4 +1,11 @@
-[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/TestExample/src/test/scala/Pipeline/MainTest.scala:23:85: value toHexString is not a member of chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m                println(s"addr: ${i.toHexString}, data: ${x.io.mem_data_test.peek().toHexString}")[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/TestExample/src/test/scala/Pipeline/MainTest.scala:23:89: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : String[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m                println(f"addr: 0x${i.toHexString}, actual data: 0x${actualData.toString(16)}%08x, expected data: 0x${expectedValue.toString(16)}%08x")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/TestExample/src/test/scala/Pipeline/MainTest.scala:23:141: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : String[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m                println(f"addr: 0x${i.toHexString}, actual data: 0x${actualData.toString(16)}%08x, expected data: 0x${expectedValue.toString(16)}%08x")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
