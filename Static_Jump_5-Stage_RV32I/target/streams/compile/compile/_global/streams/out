@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/Static_Jump_5-Stage_RV32I/src/main/scala/Pipeline/Top.scala:108:46: identifier expected but integer literal found.[0m
+[0m[[0m[31merror[0m] [0m[0m    static_jump.io.E_alu_out      := alu_out[0][0m
+[0m[[0m[31merror[0m] [0m[0m                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/Static_Jump_5-Stage_RV32I/src/main/scala/Pipeline/Top.scala:109:1: ']' expected.[0m
+[0m[[0m[31merror[0m] [0m[0m    to_pc_reg                     := static_jump.io.out_static_jump[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
