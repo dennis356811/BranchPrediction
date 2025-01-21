@@ -25,7 +25,7 @@ circuit Top :
     node _branch_target_address_T_1 = tail(_branch_target_address_T, 1) @[Static_Jump_Unit.scala 21:48]
     node _branch_target_address_T_2 = and(_branch_target_address_T_1, UInt<32>("hffffffff")) @[Static_Jump_Unit.scala 21:73]
     node branch_target_address = _branch_target_address_T_2 @[Static_Jump_Unit.scala 18:37 21:29]
-    node _io_branch_or_not_T = lt(branch_target_address, io_current_pc) @[Static_Jump_Unit.scala 22:55]
+    node _io_branch_or_not_T = gt(branch_target_address, io_current_pc) @[Static_Jump_Unit.scala 22:55]
     node _target_address_T = mux(io_branch_or_not, branch_target_address, io_to_static_jump) @[Static_Jump_Unit.scala 23:35]
     node _T = eq(io_E_op, UInt<5>("h18")) @[Static_Jump_Unit.scala 26:17]
     node _T_1 = eq(io_E_alu_out, UInt<1>("h0")) @[Static_Jump_Unit.scala 27:9]

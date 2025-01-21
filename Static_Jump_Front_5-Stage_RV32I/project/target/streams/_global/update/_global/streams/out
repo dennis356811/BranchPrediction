@@ -1,3 +1,3 @@
 [0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
-[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/Static_Jump_Font_5-Stage_RV32I/project/"), "static_jump_font_5-stage_rv32i-build")...[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/Static_Jump_Font_5-Stage_RV32I/project/"), "static_jump_font_5-stage_rv32i-build")[0m
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/mnt/c/Linux/ChiselTest/Static_Jump_Front_5-Stage_RV32I/project/"), "static_jump_front_5-stage_rv32i-build")...[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/mnt/c/Linux/ChiselTest/Static_Jump_Front_5-Stage_RV32I/project/"), "static_jump_front_5-stage_rv32i-build")[0m

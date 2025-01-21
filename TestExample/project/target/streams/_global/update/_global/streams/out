@@ -1,3 +1,3 @@
 [0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
-[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/project/"), "testexample-build")...[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/project/"), "testexample-build")[0m
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/mnt/c/Linux/ChiselTest/TestExample/project/"), "testexample-build")...[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/mnt/c/Linux/ChiselTest/TestExample/project/"), "testexample-build")[0m
