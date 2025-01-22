@@ -105,8 +105,7 @@ class Top(prog_filename: String) extends Module {
     static_jump.io.to_static_jump := to_static_jump
     static_jump.io.current_pc     := out_pc_reg
     static_jump.io.inst           := inst_to_Reg_D
-    static_jump.io.E_op           := E_op
-    static_jump.io.E_alu_out      := alu_out(0)
+    static_jump.io.next_pc_sel    := next_pc_sel
     to_pc_reg                     := static_jump.io.out_static_jump
 
 
