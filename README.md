@@ -1,32 +1,49 @@
 ## directory
-### generated 
-存放產生出來的verilog
+`{DIR_NAME}/generated`
+Store generated verilog file
 
-### src
-main裡面放module
-test裡面放testbench
+`{DIR_NAME}/src/main`
+Store module file and test program
 
-### target
-存放中間產生的廢物
+`{DIR_NAME}/src/test`
+Store Chisel test program
 
-### test_run_dir
-存放 .vcd
+`{DIR_NAME}/target`
+Store temp file during runtime
 
-### push_to_github.sh
+`{DIR_NAME}/test_run_dir`
+Store .vcd waveform file
+
+## file
+`testbench.cpp`
+Convert a **Verilog-formatted** memory file to a file type readable by **Chisel** memory.
+
+`RV32I_compile/riscv-compile.sh`
+Automatically compile RISC-V RV32I assembly code
+usage:
+```
+cd RV32I_compile
+./riscv-compile.sh <directory_name>
+```
+
+`RV32I_compile/link.ld`
+Linker file for linking 
+
+`push_to_github.sh`
 usage:
 ```
 ./push_to_github.sh "your commit message"
 ```
 automatically push to github.
 
-### test.sh
+`test.sh`
 usage:
 in /ChiselTest/
 ```
 ./test.sh "subproject you want test"
 ```
 
-### run.sh
+`run.sh`
 usage:
 in /ChiselTest/
 ```
