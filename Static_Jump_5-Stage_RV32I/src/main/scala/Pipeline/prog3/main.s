@@ -26,31 +26,31 @@ main:
     sw s1, 4(sp) 
     sw s0, 0(sp) 
 
-    # 初始化變數
-    la s0, num_test             # t0 = 地址(num_test)
-    lw s1, 0(s0)                # t1 = 測試數量 (num_test)
-    la s2, test1                # t2 = 測試資料起始地址 (test1)
-    lw s3, answer              # t3 = 結果存放地址 (results)
-    li s4, 0                    # t4 = 測試迴圈計數器 (index)
+    # initialize
+    la s0, num_test             # t0 = address of num_test
+    lw s1, 0(s0)                # t1 = num_test
+    la s2, test1                # t2 = address of test1
+    lw s3, answer               # t3 = address of answers
+    li s4, 0                    # t4 = iteration index
 
 loop:
-    # 檢查是否完成所有測試
-    beq s4, s1, done            # 如果 t4 == t1，結束測試
+    # check if all the tests are done
+    beq s4, s1, done            # if index equal num_test, end
 
-    # 加載測試資料
-    lw a0, 0(s2)                # a0 = rs1 (test[t4][0])
+    # loading test data
+    lw a0, 0(s2)                # a0 = [@s2]
     
-    # 呼叫 sqrtf 函式
-    jal ra, sqrtf                 # 呼叫 mul，結果儲存在 a2
+    # call sqrtf function
+    jal ra, sqrtf               
     mv  a2, a0
-    # 儲存結果
-    sw a2, 0(s3)                # 將 a2 儲存到 results[t4]
+    # store the answer
+    sw a2, 0(s3)                
 
-    # 更新地址和迴圈計數器
-    addi s2, s2, 4              # 移動到下一組測試資料
-    addi s3, s3, 4              # 移動到下一個結果地址
-    addi s4, s4, 1              # 測試迴圈計數器 +1
-    j loop                      # 返回迴圈
+    # update address and iteration count
+    addi s2, s2, 4              
+    addi s3, s3, 4              
+    addi s4, s4, 1              
+    j loop                      
 
 done:
     lw ra, 20(sp)
