@@ -11,6 +11,9 @@ class Top(prog_filename: String) extends Module {
         val mem_read_test = Input(Bool())
         val mem_addr_test = Input(UInt(32.W))
         val mem_data_test = Output(UInt(32.W))
+        val EXE_Branch    = Output(Bool())
+        val BTB_miss      = Output(Bool())
+        val Predict_miss  = Output(Bool())
     })
     // submodules
     val reg_pc          = Module(new Reg_PC)
@@ -104,8 +107,12 @@ class Top(prog_filename: String) extends Module {
     val W_f3                    = Wire(UInt(3.W))
     val W_wb_sel                = Wire(Bool())
 
-    // BPU
+    // For Testing
+    io.BTB_miss                 := BTB_miss
+    io.Predict_miss             := predict_miss
+    io.EXE_Branch               := (E_op === "b11000".U)
 
+    // BPU
     BPU.io.IF_pc                := out_pc_reg
     BPU.io.IF_inst              := inst_to_Reg_D
     BPU.io.EXE_pc               := out_Reg_E_pc

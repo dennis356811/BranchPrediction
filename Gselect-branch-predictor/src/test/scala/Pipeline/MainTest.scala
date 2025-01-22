@@ -8,7 +8,7 @@ import scala.io.Source
 
 class TopTest extends AnyFlatSpec with ChiselScalatestTester{
    "5-Stage test" should "pass" in{
-    val prog_num = 2
+    val prog_num = 3
     val prog_filename = f"./src/main/scala/Pipeline/prog${prog_num}/prog${prog_num}.hex"
     val golden_filename = f"./src/main/scala/Pipeline/prog${prog_num}/golden.hex"
     val goldenData = Source.fromFile(golden_filename).getLines().map(_.trim).toArray
@@ -59,11 +59,11 @@ class TopTest extends AnyFlatSpec with ChiselScalatestTester{
                     println(f"addr: [0x${i.toHexString}], actual data: 0x${actualData}%08x, expected data: 0x${expectedValue}%08x, fail")
                 }
             }
-            println(f"total cycle: ${counter}")
+            println(f"total cycle      : ${counter}")
             println(f"total branch inst: ${branch_times}")
-            println(f"total miss time: ${miss_time}")
-            println(f"hit rate: ${(branch_times - miss_time).toDouble / branch_times * 100}%%")
-            println(f"BTB miss: ${BTB_miss_time}")
+            println(f"total miss time  : ${miss_time}")
+            println(f"hit rate         : ${(branch_times - miss_time).toDouble / branch_times * 100}%%")
+            println(f"BTB miss         : ${BTB_miss_time}")
         }
     }    
 }

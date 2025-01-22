@@ -20,7 +20,7 @@ class BPU extends Module {
   })
 
   // Branch Table Size - bit
-  var SIZE          = 6
+  var SIZE          = 4
 
   // Registers
   val BHT           = RegInit(VecInit(Seq.fill(1<<SIZE)(3.U(2.W))))
@@ -60,12 +60,22 @@ class BPU extends Module {
   }
 
   when(EXE_is_B_type) {
-    when(io.alu_out) {
-      BHT(EXE_B_index) := Mux(BHT(EXE_B_index) === 3.U, 3.U, BHT(EXE_B_index) + 1.U)
-      BTB(EXE_B_index) := io.jb_pc
-      BTB_valid(EXE_B_index) := true.B
-    }.otherwise {
-      BHT(EXE_B_index) := Mux(BHT(EXE_B_index) === 0.U, 0.U, BHT(EXE_B_index) - 1.U)
+    when(last_predict) {
+      when(io.alu_out){
+        BHT(EXE_B_index)       := Mux(BHT(EXE_B_index) === 3.U, 3.U, BHT(EXE_B_index) + 1.U)
+        BTB(EXE_B_index)       := io.jb_pc
+        BTB_valid(EXE_B_index) := true.B
+      }.otherwise{
+        BHT(EXE_B_index)       := Mux(BHT(EXE_B_index) === 0.U, 0.U, BHT(EXE_B_index) - 1.U)
+      }
+    }.otherwise{
+      when(io.alu_out){
+        BHT(EXE_B_index)       := Mux(BHT(EXE_B_index) === 3.U, 3.U, BHT(EXE_B_index) + 1.U)
+        BTB(EXE_B_index)       := io.jb_pc
+        BTB_valid(EXE_B_index) := true.B
+      }.otherwise{
+        BHT(EXE_B_index)       := Mux(BHT(EXE_B_index) === 0.U, 0.U, BHT(EXE_B_index) - 1.U)
+      }
     }
   }
 }
