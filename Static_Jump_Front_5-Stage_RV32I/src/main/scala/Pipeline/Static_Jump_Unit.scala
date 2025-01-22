@@ -7,9 +7,8 @@ class Static_Jump_Unit extends Module {
         val to_static_jump = Input(Bits(32.W))
         val current_pc = Input(Bits(32.W))
         val inst = Input(Bits(32.W))
-        val E_op = Input(Bits(5.W))
-        val E_alu_out = Input(Bool())
-        
+        val next_pc_sel = Input(Bool())        
+
         val branch_or_not   = Output(Bool())
         val out_static_jump = Output(Bits(32.W))
     })
@@ -22,15 +21,7 @@ class Static_Jump_Unit extends Module {
     io.branch_or_not        := (branch_target_address > io.current_pc)
     target_address          := Mux(io.branch_or_not, branch_target_address, io.to_static_jump)
 
-    when(
-        io.E_op === OpcodeFunc7Funct3Definition.B && 
-        !io.E_alu_out
-    ){
-        io.out_static_jump  := io.to_static_jump
-    }.elsewhen(
-        io.E_op === OpcodeFunc7Funct3Definition.Jal || 
-        io.E_op === OpcodeFunc7Funct3Definition.Jalr
-    ){
+    when(io.next_pc_sel){
         io.out_static_jump  := io.to_static_jump
     }.elsewhen(io.inst(6, 2) === OpcodeFunc7Funct3Definition.B){
         io.out_static_jump  := target_address
