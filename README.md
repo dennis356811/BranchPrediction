@@ -18,3 +18,17 @@ usage:
 ./push_to_github.sh "your commit message"
 ```
 automatically push to github.
+
+### test.sh
+usage:
+in /ChiselTest/
+```
+./test.sh "subproject you want test"
+```
+
+### run.sh
+usage:
+in /ChiselTest/
+```
+./run.sh "subproject you want run"
+```
