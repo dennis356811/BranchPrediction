@@ -11,9 +11,9 @@ class Top(prog_filename: String) extends Module {
         val mem_read_test = Input(Bool())
         val mem_addr_test = Input(UInt(32.W))
         val mem_data_test = Output(UInt(32.W))
-        val EXE_Branch    = Output(UInt(1.W))
-        val BTB_miss      = Output(UInt(1.W))
-        val Predict_miss  = Output(UInt(1.W))
+        val EXE_Branch    = Output(Bool())
+        val BTB_miss      = Output(Bool())
+        val Predict_miss  = Output(Bool())
     })
     // submodules
     val reg_pc          = Module(new Reg_PC)

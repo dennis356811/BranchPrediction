@@ -7,10 +7,11 @@ import firrtl.annotations.MemoryLoadFileType
 
 class Top(prog_filename: String) extends Module {
     val io = IO(new Bundle {
-        //val pc_out = Output (Bits(32.W))
         val mem_read_test = Input(Bool())
         val mem_addr_test = Input(UInt(32.W))
         val mem_data_test = Output(UInt(32.W))
+        val miss_test     = Output(Bool())
+        val E_op_test     = Output(UInt(5.W))
     })
     // submodules
     val static_jump     = Module(new Static_Jump_Unit)
@@ -256,12 +257,12 @@ class Top(prog_filename: String) extends Module {
     W_f3                        := controller.io.W_f3          
     W_wb_sel                    := controller.io.W_wb_data_sel 
 
-
-    //io.pc_out                   := reg_pc.io.current_pc
     // for testing
     dm.io.mem_read_test         := io.mem_read_test
     dm.io.mem_addr_test         := io.mem_addr_test
     io.mem_data_test            := dm.io.mem_data_test
+    io.E_op_test                := E_op
+    io.miss_test                := next_pc_sel
 }
 
 object Top extends App {

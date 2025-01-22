@@ -20,9 +20,8 @@ class BPU extends Module {
   })
   // configrable parameter
   // Branch Table Size - bit
-  var GH_SIZE       = 4
-  var BHT_SIZE      = 8
-
+  var GH_SIZE       = 2
+  var BHT_SIZE      = 4
   // Registers
   val BHT           = RegInit(VecInit(Seq.fill(1<<BHT_SIZE)(3.U(2.W))))
   val BTB           = RegInit(VecInit(Seq.fill(1<<BHT_SIZE)(0.U(32.W))))
