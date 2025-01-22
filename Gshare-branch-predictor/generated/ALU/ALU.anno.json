@@ -1,0 +1,21 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"generated/ALU"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~ALU|ALU>io_alu_out",
+    "sources":[
+      "~ALU|ALU>io_opcode",
+      "~ALU|ALU>io_func7",
+      "~ALU|ALU>io_func3",
+      "~ALU|ALU>io_operand2",
+      "~ALU|ALU>io_operand1"
+    ]
+  }
+]

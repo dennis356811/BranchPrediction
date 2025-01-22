@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/5-Stage-RV32I/src/test/scala/Pipeline/MainTest.scala:21:34: value mem_read is not a member of Pipeline.DataMemory[0m
-[0m[[0m[31merror[0m] [0m[0m            println(x.DataMemory.mem_read.litValue)[0m
-[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m

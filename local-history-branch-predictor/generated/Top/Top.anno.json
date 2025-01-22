@@ -1,0 +1,34 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|SRAM",
+    "duplicate":"~Top|Top/im:SRAM",
+    "index":0.07142857142857142
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|Reg_M",
+    "duplicate":"~Top|Top/reg_m:Reg_M",
+    "index":0.6428571428571429
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|SRAM_1",
+    "duplicate":"~Top|Top/dm:SRAM",
+    "index":0.7142857142857143
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|Reg_W",
+    "duplicate":"~Top|Top/reg_w:Reg_M",
+    "index":0.7857142857142857
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"generated/Top"
+  }
+]

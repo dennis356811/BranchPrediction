@@ -1,0 +1,18 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"generated/LD_Filter"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~LD_Filter|LD_Filter>io_ld_data_f",
+    "sources":[
+      "~LD_Filter|LD_Filter>io_func3",
+      "~LD_Filter|LD_Filter>io_ld_data"
+    ]
+  }
+]
