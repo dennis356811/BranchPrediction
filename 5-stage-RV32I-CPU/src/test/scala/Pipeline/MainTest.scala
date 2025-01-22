@@ -8,7 +8,7 @@ import scala.io.Source
 
 class TopTest extends AnyFlatSpec with ChiselScalatestTester{
    "5-Stage test" should "pass" in{
-    val prog_num = 1
+    val prog_num = 3
     val prog_filename = f"./src/main/scala/Pipeline/prog${prog_num}/prog${prog_num}.hex"
     val golden_filename = f"./src/main/scala/Pipeline/prog${prog_num}/golden.hex"
     val goldenData = Source.fromFile(golden_filename).getLines().map(_.trim).toArray
