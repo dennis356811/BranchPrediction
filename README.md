@@ -19,7 +19,7 @@ Store .vcd waveform file
 Convert a **Verilog-formatted** memory file to a file type readable by **Chisel** memory.
 
 * `RV32I_compile/riscv-compile.sh`  
-Automatically compile RISC-V RV32I assembly code if your environment already installed [riscv-gnu-toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain/releases/tag/2025.01.20)  
+Automatically compile RISC-V RV32I assembly code if your environment already installed [riscv-gnu-toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain/releases)  
 usage:
 ```bash
 cd RV32I_compile
