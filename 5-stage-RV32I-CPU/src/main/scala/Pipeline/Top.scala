@@ -11,6 +11,8 @@ class Top(prog_filename: String) extends Module {
         val mem_read_test = Input(Bool())
         val mem_addr_test = Input(UInt(32.W))
         val mem_data_test = Output(UInt(32.W))
+        val miss_test     = Output(Bool())
+        val E_op_test     = Output(UInt(5.W))
     })
     // submodules
     val reg_pc          = Module(new Reg_PC)
@@ -235,11 +237,12 @@ class Top(prog_filename: String) extends Module {
     W_wb_sel                    := controller.io.W_wb_data_sel 
 
 
-    //io.pc_out                   := reg_pc.io.current_pc
     // for testing
     dm.io.mem_read_test         := io.mem_read_test
     dm.io.mem_addr_test         := io.mem_addr_test
     io.mem_data_test            := dm.io.mem_data_test
+    io.E_op_test                := E_op
+    io.miss_test                := next_pc_sel
 }
 
 object Top extends App {

@@ -1,7 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/test/scala/Pipeline/MainTest.scala:23:44: not found: value initFile[0m
-[0m[[0m[31merror[0m] [0m[0m    loadMemoryFromFile(test_module.im.mem, initFile, MemoryLoadFileType.Hex)[0m
-[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/test/scala/Pipeline/MainTest.scala:24:44: not found: value initFile[0m
-[0m[[0m[31merror[0m] [0m[0m    loadMemoryFromFile(test_module.dm.mem, initFile, MemoryLoadFileType.Hex)[0m
-[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
