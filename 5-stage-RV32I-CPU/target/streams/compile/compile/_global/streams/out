@@ -1,5 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/bobby/Desktop/RV32I_PipelineCPU_Chisel/ChiselTest/TestExample/src/main/scala/Pipeline/Top.scala:246:49: not enough arguments for constructor Top: (prog_filename: String)Pipeline.Top.[0m
-[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter prog_filename.[0m
-[0m[[0m[31merror[0m] [0m[0m    (new chisel3.stage.ChiselStage).emitVerilog(new Top, Array("--target-dir", "generated/Top"))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m

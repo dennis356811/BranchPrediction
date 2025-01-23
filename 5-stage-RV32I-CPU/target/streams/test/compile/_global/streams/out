@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/mnt/c/Linux/ChiselTest/TestExample/src/test/scala/Pipeline/MainTest.scala:30:39: Boolean does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m                else (counter > 40000){[0m
-[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
