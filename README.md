@@ -51,5 +51,6 @@ class TopTest extends AnyFlatSpec with ChiselScalatestTester{
     val prog_filename = f"./src/main/scala/Pipeline/prog${prog_num}/prog${prog_num}.hex"
     val golden_filename = f"./src/main/scala/Pipeline/prog${prog_num}/golden.hex"
     val goldenData = Source.fromFile(golden_filename).getLines().map(_.trim).toArray
+    // ...
 ```
 Change `prog_num` can test different program.
