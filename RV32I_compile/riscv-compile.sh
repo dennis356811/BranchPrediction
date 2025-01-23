@@ -4,10 +4,10 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-# 獲取參數
+# get paramter
 PROGFILE=$1
 
-# 檢查資料夾是否存在
+# check if directory exists
 if [ ! -d "$PROGFILE" ]; then
     echo "error: directory '$PROGFILE' is not exist!"
     exit 1
@@ -15,12 +15,12 @@ fi
 
 echo "Starting compilation for directory: $PROGFILE"
 
-# 執行指令
+# set valuable
 OBJ_FILES=""
 SETUP_FILE="${PROGFILE}/setup.s"
 SETUP_OBJ="${PROGFILE}/setup.o"
 
-# 編譯 setup.s（如果存在）
+# compile setup.s (if exists)
 if [ -f "$SETUP_FILE" ]; then
     echo "Compiling $SETUP_FILE to $SETUP_OBJ..."
     riscv32-unknown-elf-as -march=rv32i -mabi=ilp32 "$SETUP_FILE" -o "$SETUP_OBJ"
@@ -33,15 +33,15 @@ else
     echo "Warning: $SETUP_FILE not found. Skipping..."
 fi
 
-# 編譯其他 .s 檔案
+# compile other .s file
 for ASM_FILE in ${PROGFILE}/*.s; do
-    # 跳過 setup.s
+    # skip setup.s
     if [ "$ASM_FILE" == "$SETUP_FILE" ]; then
         continue
     fi
 
     if [ -f "$ASM_FILE" ]; then
-        OBJ_FILE="${ASM_FILE%.s}.o"  # 轉換 .s -> .o
+        OBJ_FILE="${ASM_FILE%.s}.o" 
         echo "Compiling $ASM_FILE to $OBJ_FILE..."
         riscv32-unknown-elf-as -march=rv32i -mabi=ilp32 "$ASM_FILE" -o "$OBJ_FILE"
         if [ $? -ne 0 ]; then
@@ -52,13 +52,12 @@ for ASM_FILE in ${PROGFILE}/*.s; do
     fi
 done
 
-# 檢查是否有生成任何目標檔案
 if [ -z "$OBJ_FILES" ]; then
     echo "Error: No assembly files found in '$PROGFILE'"
     exit 1
 fi
 
-# 連結 .o 檔案
+# linking
 OUTPUT_ELF="${PROGFILE}/main.elf"
 echo "Linking object files to $OUTPUT_ELF..."
 riscv32-unknown-elf-ld -b elf32-littleriscv -T link.ld $OBJ_FILES -o "$OUTPUT_ELF"
@@ -67,7 +66,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# 生成 .hex 文件
+# generate .hex file
 OUTPUT_HEX="${PROGFILE}/main.hex"
 echo "Generating HEX file: $OUTPUT_HEX..."
 riscv32-unknown-elf-objcopy -O verilog "$OUTPUT_ELF" "$OUTPUT_HEX"
@@ -76,7 +75,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# 生成 .dump 文件
+# generate .dump file
 OUTPUT_DUMP="${PROGFILE}/main.dump"
 echo "Generating DUMP file: $OUTPUT_DUMP..."
 riscv32-unknown-elf-objdump -xsd "$OUTPUT_ELF" > "$OUTPUT_DUMP"
