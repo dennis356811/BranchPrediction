@@ -42,7 +42,7 @@ in /BranchPrediction/
 ```bash
 ./run.sh "subproject you want run"
 ```
-* `{DIR_NAME}/src/test/scala/Pipline/MainTest.scala`
+* `{DIR_NAME}/src/test/scala/Pipline/MainTest.scala`  
 In this file
 ```scala
 class TopTest extends AnyFlatSpec with ChiselScalatestTester{
