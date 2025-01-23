@@ -89,7 +89,6 @@ fi
 #riscv32-unknown-elf-ld -b elf32-littleriscv -T link.ld ./${PROGFILE}/setup.o ./${PROGFILE}/main.o -o ./${PROGFILE}/main.elf
 #riscv32-unknown-elf-objcopy -O verilog ./${PROGFILE}/main.elf ./${PROGFILE}/main.hex
 #riscv32-unknown-elf-objdump -xsd ./${PROGFILE}/main.elf > ./${PROGFILE}/main.dump
-# 檢查執行結果
 if [ $? -eq 0 ]; then
     echo "compile success,  result in ./${PROGFILE}"
 else
